@@ -15,10 +15,9 @@ LOCAL_CFLAGS :=
 
 LOCAL_ARM_MODE := arm
 
-LOCAL_STATIC_LIBRARIES := libExynosOMX_Adec libExynosOMX_OSAL libExynosOMX_Basecomponent \
-	libsrpapi
+LOCAL_STATIC_LIBRARIES := libExynosOMX_Adec libExynosOMX_OSAL libExynosOMX_Basecomponent
 LOCAL_SHARED_LIBRARIES := libc libdl libcutils libutils libui \
-	libExynosOMX_Resourcemanager libffmpegapi\
+	libExynosOMX_Resourcemanager liblog\
 
 LOCAL_C_INCLUDES := $(EXYNOS_OMX_INC)/khronos \
 	$(EXYNOS_OMX_INC)/exynos \
@@ -26,7 +25,6 @@ LOCAL_C_INCLUDES := $(EXYNOS_OMX_INC)/khronos \
 	$(EXYNOS_OMX_TOP)/core \
 	$(EXYNOS_OMX_COMPONENT)/common \
 	$(EXYNOS_OMX_COMPONENT)/audio/dec \
-	$(EXYNOS_AUDIO_CODEC)/alp/include \
-	$(EXYNOS_AUDIO_CODEC)/ffmpeg/include
+	$(EXYNOS_AUDIO_CODEC)/alp/include
 
 include $(BUILD_SHARED_LIBRARY)
